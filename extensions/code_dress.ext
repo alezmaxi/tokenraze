@@ -1,0 +1,29 @@
+CODE EXTENSION — Append this to decompress.txt when your project involves code generation.
+
+If the compressed text contains lean code (v1,v2,f1,f2 aliases and shorthands), apply these rules:
+(1) Infer what each alias represents from context (fetch calls, SQL queries, conditionals, DOM targets, assignments, etc).
+(2) Rename to clear, semantic names. Use camelCase for JS, snake_case for PHP/Python.
+(3) Expand all shorthands:
+PHP expansions:
+  J(x) → echo json_encode(x)
+  Q(sql,arr) → $stmt = $conn->prepare(sql); $stmt->execute(arr);
+  R("e",x) → ["status" => "error", "msg" => x]
+  R("ok") → ["status" => "ok"]
+  R("ok",d) → merge d into status array
+JS expansions:
+  J(x) → JSON response equivalent
+  R("e",x) → {status: "error", msg: x}
+  R("ok") → {status: "ok"}
+  R("ok",d) → merge d into status object
+  F(url,opts) → fetch(url, opts).then(r => r.json())
+  D(id) → document.getElementById(id)
+  EL(el,ev,fn) → el.addEventListener(ev, fn)
+  QS(sel) → document.querySelector(sel)
+  QA(sel) → document.querySelectorAll(sel)
+  CL(el,a,c) → el.classList.a(c)
+  CE(tag) → document.createElement(tag)
+  FA(fd,k,v) → fd.append(k, v)
+(4) Add brief comments only at major logic blocks, not every line.
+(5) Restore standard formatting: proper indentation, spacing, line breaks.
+(6) Do NOT change logic, reorder, refactor, add error handling, or add code. You are a dresser, not a developer.
+(7) Output only the dressed code. No explanations, no markdown fences.
