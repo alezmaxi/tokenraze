@@ -372,14 +372,7 @@ We just compress the I/O wrapper around that thinking.
 ---
  
 ## Compatibility
- 
-| Provider | Expensive Model | Cheap Model | Works? |
-|----------|----------------|-------------|--------|
-| Anthropic | Opus | Haiku | ✅ |
-| OpenAI | GPT-4 | GPT-4 Mini | ✅ |
-| Google | Gemini Pro | Flash Lite | ✅ |
-| Mixed | Any premium | Any budget | ✅ |
- 
+
 Model-agnostic. Provider-agnostic. Language-agnostic.
  
 ---
@@ -389,8 +382,8 @@ Model-agnostic. Provider-agnostic. Language-agnostic.
 V1 ships with a **modular plug-in architecture**: base pipeline + bolt-on extensions. Generic Code mode is the first extension, which try to cover JS syntax as a start. 
  
 **Planned extensions:**
-- 📊 **data_lean.ext / data_dress.ext** — Structured data compression
-- 🗄️ **sql_lean.ext / sql_dress.ext** — Database query optimization
+- **data_lean.ext / data_dress.ext** — Structured data compression
+- **sql_lean.ext / sql_dress.ext** — Database query optimization
 More could be coming (Python,C,Java,etc)
  
 The base pipeline stays stable. Extensions grow the ecosystem.
