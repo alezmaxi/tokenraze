@@ -98,13 +98,13 @@ At scale (thousands of API calls/day), this translates directly to 50-75% reduct
 Everything is in the [`/prompts`](./prompts) folder:
  
 ### Base Pipeline
-- **[compress.txt](./prompts/compress.txt)** — Compressor (cheap model)
-- **[think.txt](./prompts/think.txt)** — Thinker (expensive model)  
-- **[decompress.txt](./prompts/decompress.txt)** — Decompressor (cheap model)
+- **[compress.txt](compress.txt)** — Compressor (cheap model)
+- **[think.txt](think.txt)** — Thinker (expensive model)  
+- **[decompress.txt](decompress.txt)** — Decompressor (cheap model)
  
 ### Extensions (Plug-ins)
-- **[code_lean.ext](./prompts/extensions/code_lean.ext)** — Append to `think.txt` for code projects
-- **[code_dress.ext](./prompts/extensions/code_dress.ext)** — Append to `decompress.txt` for code projects
+- **[code_lean.ext](./extensions/code_lean.ext)** — Append to `think.txt` for code projects
+- **[code_dress.ext](./extensions/code_dress.ext)** — Append to `decompress.txt` for code projects
  
 Extensions are modular. If your project involves code, append the relevant `.ext` to your base prompt. If it's text-only, use the base pipeline as-is. No wasted tokens on unused instructions.
  
