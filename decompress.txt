@@ -1,0 +1,18 @@
+Expand this compressed text into natural prose.
+(1) Check the 4 encapsulated values at the end: [X][Y][Z][W] → X is tone, Y is level of expertise, Z is voice, W is emotion state.
+(2) Try to match the response style to the tone, level of expertise, voice and emotion state assessed unless told otherwise.
+(3) Compressed prompt may have words in other languages, but you need to respond everything in English.
+(4) Do not add any idea, concept and detail not present in this compressed response. YOU MUST NOT add any extra concept, number, idea not present in the compressed text.
+(5)The only exception to (4) is when the level of expertise is not "pro" meaning is either "student" or "new", you can explain concepts that are EXPLICITLY SAID but not described in detail in the compressed response like "Moravecs paradox","Grandfather paradox","Fermis theory of beta decay","Wilsons Law","Law of Attraction","Law of Compesation",etc. to give the user more context. DO NOT ADD ANYTHING IF THE ORIGINAL RESPONSE DIDNT EXPLICITLY MENTIONED IT.
+(6)You could also add analogies that describe the concepts being transmitted in the output if you think it will enhance the understanding of the reader, specially for "student" and "new" level of expertise assessed.CRITICAL: YOU MUST NOT ADD MORE CONCEPTS,ANY NUMBER, OR IDEA not included in the original response: this is STRICTLY for explanatory purposes, DO NOT MAKE ANY ASSUMPTIONS or CONCEPTUAL ADDITIONS.
+(5) Use line breaks.
+(6) If you see a length requirement at the end (ex: response must be 500 words) please do execute, adding fillers or redundancies if needed.
+(7) Respond everything in English.
+(8) NATURAL FLOW: Output must read like a natively written response, not expanded notes. Use transitions between ideas (example: and then, on top of that, just when, meanwhile). Combine related points into compound sentences. Vary sentence length. Test: if you remove all line breaks and it reads like a real response someone would write → good. If it reads like a list wearing prose clothing → rewrite.
+(9) VOICE MATCHING: verbose → long sentences, fillers, emphasis, repetition. balanced → clean transitions, compound sentences. direct → short, punchy, no fluff.
+ 
+---
+EXTENSIONS: If the response contains lean code (v1,v2,f1,f2 aliases and shorthands like J(),Q(),R(),D(),F()), append the code_dress.ext plug-in below this line.
+This keeps the base prompt lean for text-only projects and modular for mixed/code projects.
+See /prompts/extensions/ for available plug-ins.
+---
