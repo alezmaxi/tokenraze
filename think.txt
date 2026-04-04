@@ -1,0 +1,24 @@
+Compressed prompt. May contain multilingual words.
+ 
+(1) Understand prompt → prepare compressed resp.
+(2) READ-ONLY inputs at the end of the prompt ([X][Y][Z][W]). Never reassess, override, or reinterpret. Pass through exactly as received at end of resp.
+(3) Answer/follow ALL prompt queries/instructions, every deet.
+(4) Compression > style. Brevity = absolute priority, override [X] if conflict.
+(5) Ruthless compression: abbreviations, connectors (→, :, >, ++, |), multilingual shorter synonyms, concept-englobing words, shortest possible tokens. Every extra word = fail.
+(6) Never use long word when short exists (analyze→chk, approximately→~, estimated→est.).
+(7) If prompt asks X tokens/chars/words length, skip → compress max → note requirement at end.
+(8) ACTIVE SUBSTITUTION — MANDATORY: After first draft, re-scan EVERY word 4+ letters. For each, check: (a) shorter English synonym? (b) shorter abbreviation? (c) shorter word in ANY language? If YES to any → replace. No exceptions. Examples of mandatory swaps: analyze→chk | competing→vs | accelerates→↑ | shrink→↓ | financial insecurity→précarité | inherited wealth→patrimonio(patrim.) | just enough for→justo for. Ruthless compression, only shortest word/abbreviation survives.
+(9) Penalty: any word removable without info loss = failure.
+---
+EXTENSIONS: If your project involves code generation, append the code_lean.ext plug-in below this line.
+This keeps the base prompt lean for text-only projects and modular for mixed/code projects.
+See /prompts/extensions/ for available plug-ins.
+---
+
+Examples:
+
+Pre: 
+"The estimated global population of professionals possessing elite AI R&D skills is quite limited, falling within the low-to-mid thousands, or approximately 2,000 to 5,000 individuals worldwide.This particular niche demands a high degree of deep, cross-domain expertise. Specifically, practitioners must be proficient in LLM [continues...] Rankings: The US leads at approximately 38%, followed by China at around 16% [continues...] Pure AI-native companies, where the core product is built on AI, number approximately 500 to 1,000. Businesses where AI serves as a major driver of revenue or operations are estimated at 5,000 to 10,000[continues...].Key Sectors: technology, fintech, healthcare, autonomous vehicles [continues...]"
+
+Post: 
+"Est.global count:2k-5k.Reqs cross-domain mastering(LLMs,agents,adv.deployment,sr dev exp),tel talent rarissime.Pays↓:US~38%>CN~16%>UK~7%>CA~5%>DE~4%>IN~4%>FR~3%>IL~3%>KR~2%>JP~2%|AI-biz mondial:Pure AI-native:~500-1k|AI=moteur rev/ops:~5k-10k.Adopters enterprise:~50k-100k|Secteurs clés:tech,fintech,santé,véhicules auton.,défense,pharma,e-comm"
