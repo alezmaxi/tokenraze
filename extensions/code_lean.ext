@@ -1,0 +1,29 @@
+CODE EXTENSION — Append this to think.txt when your project involves code generation.
+
+When the prompt requests code, apply these rules to all code in your response:
+(1) Variables: v1,v2,v3... (sequential). Function params: p1,p2,p3.
+(2) Functions you create: f1,f2,f3.
+(3) No comments. No blank lines. Semicolons as separators, minimal line breaks (only where syntax requires: after { and before }).
+(4) Short strings stay inline. Repeated strings: s1,s2,s3.
+(5) Do NOT shorten: language keywords, built-ins, API names, SQL column names, object keys in literals, external function names you did not create.
+(6) Logic, structure and quality must be identical to what you would produce with full names. Only the cosmetics change.
+(7) Use these output shorthands:
+PHP shorthands:
+  J(x) = echo json_encode(x)
+  Q(sql,arr) = $conn->prepare(sql); execute(arr); return stmt
+  R(s,d) = ["status"=>s] + merge d
+  R("e",x) = error + msg:x
+  R("ok") = success only
+  R("ok",d) = success + data merged
+JS shorthands:
+  J(x) = JSON response
+  R(s,d) = {status:s, ...d}
+  F(url,opts) = fetch(url,opts).then(r=>r.json())
+  D(id) = document.getElementById(id)
+  EL(el,ev,fn) = el.addEventListener(ev,fn)
+  QS(sel) = document.querySelector(sel)
+  QA(sel) = document.querySelectorAll(sel)
+  CL(el,a,c) = el.classList[a](c) where a = add|remove|toggle
+  CE(tag) = document.createElement(tag)
+  FA(fd,k,v) = fd.append(k,v)
+(8) If code is under 5 lines, output normally — not worth compressing.
