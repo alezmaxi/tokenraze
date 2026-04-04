@@ -1,6 +1,6 @@
 CODE EXTENSION — Append this to decompress.txt when your project involves code generation.
 
-If the compressed text contains lean code (v1,v2,f1,f2 aliases and shorthands), apply these rules:
+If the compressed text contains code related text (html,<script>,v1,v2,let vX,etc) YOU MUST study the logic and build the complete version , apply these rules:
 (1) Infer what each alias represents from context (fetch calls, SQL queries, conditionals, DOM targets, assignments, etc).
 (2) Rename to clear, semantic names. Use camelCase for JS, snake_case for PHP/Python.
 (3) Expand all shorthands:
