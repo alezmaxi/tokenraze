@@ -137,36 +137,40 @@ Future extensions (sql_lean.ext, data_lean.ext, etc.) follow the same pattern �
  
 That's it. Works with any provider: Anthropic, OpenAI, Google, local models.
  
-### Try It Now — Free, No Code
+### Try It Now — Free
+
+Option 1: 
+
+Try it at: https://www.tokenraze.com/ (with limits, only a token limited Gemini Pro available)
+
+Option 2: 
+
+You can test TokenRaze flow in 5 minutes using AI providers projects/gems (free tier works). 
+Create 2 projects/gems, paste one prompt into each as project instructions, then chain them.
  
-You can test TokenRaze in 5 minutes using AI providers projects/gems (free tier works). Create 3 projects/gems, paste one prompt into each as project instructions, then chain them.
- 
-**Step 1 — Create the Compressor project**
+**Step 1 — Create the Cheap Model Compressor/Decompressor project**
  
 - Go to claude.ai → Projects → Create Project
-- Name it `TR - Compressor`
+- Name it `Compress-Decompress`
 - In the project instructions, paste the contents of `compress.txt`
-- Select the cheapest model available (Haiku)
+- Add 'If you receive a compressed text then use these rules:", then paste the contents of `decompress.txt`
+- For code projects: also paste the contents of `extensions/code_dress.ext` at the end
  
 **Step 2 — Create the Thinker project**
  
-- Create another project → name it `TR - Thinker`
+- Create another project → name it `Thinker`
 - In the project instructions, paste the contents of `think.txt`
 - For code projects: also paste the contents of `extensions/code_lean.ext` at the end
 - Select the most capable model (Opus)
- 
-**Step 3 — Create the Decompressor project**
- 
-- Create another project → name it `TR - Decompressor`
-- In the project instructions, paste the contents of `decompress.txt`
-- For code projects: also paste the contents of `extensions/code_dress.ext` at the end
-- Select the cheapest model available (Haiku or Sonnet)
+
+
  
 **Step 4 — Run the pipeline**
  
-1. Open `TR - Compressor` → start a conversation → type your prompt → copy the compressed output
-2. Open `TR - Thinker` → start a conversation → paste the compressed prompt → copy the compressed response
-3. Open `TR - Decompressor` → start a conversation → paste the compressed response → get your final readable output
+1. Open `Compress-Decompress` → select Haiku -> start a conversation → type your prompt → copy the compressed output
+2. Open `Thinker` → start a conversation → paste the compressed prompt → copy the compressed response
+3. Revisit `Compress-Decompress` → paste the compressed response → get your final readable output
+4. Revisit (1) to continue the conversation
  
 Compare the Thinker's compressed response length against what you'd normally get with a regular prompt. That's your savings.
  
