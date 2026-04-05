@@ -4,7 +4,7 @@
 
 See it: https://www.tokenraze.com/
 
-Tokenraze reduces general expensive token consumption up to 60% for coding tasks using cheapers model for prompt compression and output decompression with minimal/zero quality loss.
+Tokenraze reduces general expensive token consumption up to 60% for general tasks using cheapers model for prompt compression and output decompression with minimal/zero quality loss.
 
 This, combined with recent RAG techniques provides a really efficient interface for many token intensive tasks.
 
