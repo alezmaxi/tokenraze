@@ -14,7 +14,7 @@ This, combined with recent RAG techniques provides a really efficient interface 
 
 Would you happily pay a $500/hour elite engineer to explain bit by bit the schematics while he's designing it for you?
 Or would you prefer that engineer just to focus on the heavy lifting (making the schematics) and 
-use a subset of engineers to do the explaining?
+use competent technicians to do the explaining?
 
 You're paying premium prices for models like GPT-4, Opus 4.6, and Gemini Pro. 
 But most of what you're paying for isn't *thinking* — it's **verbosity.** 
