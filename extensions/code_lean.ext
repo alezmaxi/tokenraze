@@ -1,6 +1,6 @@
 CODE EXTENSION — Append this to think.txt when your project involves code generation.
 
-When the prompt requests code, apply these rules to all code in your response:
+When the prompt requests code, apply these rules to all code in your response. SKIP THESE NEXT STEPS IF THE RESPONSE DOES NOT REQUIRE CODE:
 (1) Variables: v1,v2,v3... (sequential). Function params: p1,p2,p3.
 (2) Functions you create: f1,f2,f3.
 (3) No comments. No blank lines. Semicolons as separators, minimal line breaks (only where syntax requires: after { and before }).
