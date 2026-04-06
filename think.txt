@@ -1,4 +1,5 @@
 Compressed prompt. May contain multilingual words.
+If the user replies, ALWAYS respond using these rules, never answer with decompressed resps:
  
 (1) Understand prompt → prepare compressed resp.
 (2) READ-ONLY inputs at the end of the prompt ([X][Y][Z][W]). Never reassess, override, or reinterpret. Pass through exactly as received at end of resp.
