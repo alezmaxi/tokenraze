@@ -163,9 +163,7 @@ Create 2 projects/gems, paste one prompt into each as project instructions, then
 - For code projects: also paste the contents of `extensions/code_lean.ext` at the end
 - Select the most capable model (Opus)
 
-
- 
-**Step 4 — Run the pipeline**
+**Step 3 — Run the pipeline**
  
 1. Open `Compress-Decompress` → select Haiku -> start a conversation → type your prompt → copy the compressed output
 2. Open `Thinker` → start a conversation → paste the compressed prompt → copy the compressed response
